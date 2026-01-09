@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Games</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar {
+            width: 250px;
+            background: #222;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            overflow-y: auto;
+        }
+
+        #sidebar a {
+            display: block;
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #sidebar a:hover {
+            background: #444;
+        }
+
+        #viewer {
+            margin-left: 250px;
+            height: 100vh;
+            width: calc(100% - 250px);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <h2>My Games</h2>
+
+        <!-- Add links here -->
+        <a href="game1.html" target="gameframe">Game 1</a>
+        <a href="game2.html" target="gameframe">Game 2</a>
+        <a href="game3.html" target="gameframe">Game 3</a>
+
+        <!-- Add more links as needed -->
+    </div>
+
+    <!-- This loads the game in the same window -->
+    <iframe id="viewer" name="gameframe"></iframe>
+
+</body>
+</html>

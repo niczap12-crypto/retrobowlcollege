@@ -1,62 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Games</title>
+    <meta charset="UTF-8">
+    <title>Game Menu</title>
     <style>
         body {
-            font-family: Arial;
-            background: #111;
-            color: white;
             margin: 0;
-            padding: 0;
+            background: #000;
+            color: white;
+            font-family: Arial, sans-serif;
         }
 
+        /* Sidebar */
         #sidebar {
             width: 250px;
-            background: #222;
             height: 100vh;
+            background: #111;
             padding: 20px;
             box-sizing: border-box;
             position: fixed;
             overflow-y: auto;
+            border-right: 2px solid #222;
+        }
+
+        #sidebar h2 {
+            margin-top: 0;
+            color: #0f9;
         }
 
         #sidebar a {
             display: block;
             padding: 10px;
-            margin-bottom: 8px;
-            background: #333;
+            margin-bottom: 10px;
+            background: #222;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            transition: 0.2s;
         }
 
         #sidebar a:hover {
-            background: #444;
+            background: #333;
         }
 
+        /* Game viewer */
         #viewer {
             margin-left: 250px;
-            height: 100vh;
             width: calc(100% - 250px);
+            height: 100vh;
             border: none;
+            background: #000;
+        }
+
+        /* Back button */
+        #backBtn {
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #333;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        #backBtn:hover {
+            background: #444;
         }
     </style>
 </head>
 <body>
 
     <div id="sidebar">
-        <h2>My Games</h2>
+        <h2>Game Menu</h2>
 
-        <!-- Add links here -->
-        <a href="retrobowlcollege.html" target="gameframe">Retro Bowl College</a>
+        <!-- Back to homepage -->
+        <a id="backBtn" href="index.html">← Back</a>
+
+        <!-- Add your games here -->
+        <a href="retro-bowl-college.html" target="gameframe">Retro Bowl College</a>
         <a href="game2.html" target="gameframe">Game 2</a>
         <a href="game3.html" target="gameframe">Game 3</a>
 
-        <!-- Add more links as needed -->
+        <!-- Add more as needed -->
     </div>
 
-    <!-- This loads the game in the same window -->
+    <!-- Game loads here -->
     <iframe id="viewer" name="gameframe"></iframe>
 
 </body>

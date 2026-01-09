@@ -26,6 +26,24 @@
       border: 0px;
     }
 
+    /* Added button styling */
+    #enterGamesBtn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 12px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    #enterGamesBtn:hover {
+      background: #444;
+    }
 
     canvas {
       image-rendering: pixelated;
@@ -37,18 +55,15 @@
       border: 0px;
     }
 
-
     :-webkit-full-screen #canvas {
       width: 100%;
       height: 100%;
     }
 
-
     :-webkit-full-screen {
       width: 100%;
       height: 100%;
     }
-
 
     /* Custom Runner Styles */
     div.gm4html5_div_class {
@@ -56,7 +71,6 @@
       padding: 0px;
       border: 0px;
     }
-
 
     div.gm4html5_login {
       padding: 20px;
@@ -68,21 +82,17 @@
       box-shadow: #101010 20px 20px 40px;
     }
 
-
     div.gm4html5_cancel_button {
       float: right;
     }
-
 
     div.gm4html5_login_button {
       float: left;
     }
 
-
     div.gm4html5_login_header {
       text-align: center;
     }
-
 
     :-webkit-full-screen {
       width: 100%;
@@ -93,6 +103,13 @@
 
 
 <body>
+
+  <!-- ✅ NEW BUTTON ADDED HERE -->
+  <button id="enterGamesBtn" onclick="window.location.href='games.html'">
+    Enter Games
+  </button>
+  <!-- END OF NEW BUTTON -->
+
   <div class="gm4html5_div_class" id="gm4html5_div_id">
     <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" alt="GameMaker:HTML5 loading screen" style="display:none;" />
     <!-- Create the canvas element the game draws to -->
@@ -110,3 +127,4 @@
 
 
 </html>
+
